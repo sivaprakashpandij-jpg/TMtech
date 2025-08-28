@@ -1,0 +1,77 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Default body for all pages */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;   /* light background for all pages */
+}
+
+/* Background image ONLY for home page */
+body.home-page {
+  background-size: cover;
+}
+
+/* Header (common for all pages) */
+header {
+  background: #222;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo (image + text) */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 50px;            /* small logo size */
+  width: 50px;
+  border-radius: 50%;      /* make circular */
+  object-fit: cover;
+  border: 2px solid #ff9800; /* orange ring */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff9800;   /* highlight brand name */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Navigation (common for all pages) */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #ff9800;
+}
